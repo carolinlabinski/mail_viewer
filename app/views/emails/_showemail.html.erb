@@ -2,4 +2,5 @@
   <h3><u>Objet :</u> <%= @email.object %></h3><br>
   <p><%= @email.body %></p><br>
   <%= link_to('Supprimer', email_path(@email), method: :delete, class:"btn btn-danger btn-sm mr-2", remote: true) %>
+  <%= link_to('Marquer comme non-lu', email_path(@email), method: :put, class:"btn btn-secondary btn-sm", id: "btn read " + @email.id.to_s, remote: true) %>
 </div>
