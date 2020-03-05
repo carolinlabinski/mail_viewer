@@ -1,0 +1,16 @@
+<table class="table table-borderless">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col" style="padding-left: 80px">List of emails</th>
+      <th scope="col" style="width: 60%;">Selected email</th>
+      <th scope="col"><%= link_to('Request email', emails_path, method: :post, class:"btn btn-primary btn-sm", remote: true) %></th>
+    </tr>
+  </thead>
+  <tbody id="emails_list">
+    <% @emails.each do |email| %>
+      <tr>
+        <th id="email <%= email.id %>" scope="row" style="width: 25%; padding-left: 90px; padding-top: 30px;"><%=link_to(email.object, email_path(email), method: :get, remote: true)%></th>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

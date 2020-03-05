@@ -1,0 +1,7 @@
+if(document.getElementById("show <%= @email.id %>")){
+  document.getElementById("show <%= @email.id %>").parentNode.removeChild(document.getElementById("show <%= @email.id %>"));
+}
+else{
+  document.getElementById("email <%= @email.id %>").insertAdjacentHTML("afterend", "<%= j render 'showemail', email: @email %>");
+  document.getElementById("email <%= @email.id %>").childNodes[0].style.fontWeight = "300";
+};
