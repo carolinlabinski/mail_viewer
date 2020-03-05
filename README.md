@@ -1,3 +1,3 @@
 # README
 
-https://mymails-thp.herokuapp.com/
+https://mythpmailer.herokuapp.com/
