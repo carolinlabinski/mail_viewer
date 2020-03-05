@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_03_05_132334) do
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "read"
+    t.boolean "read", default: false, null: false
   end
 
   create_table "tasks", force: :cascade do |t|
